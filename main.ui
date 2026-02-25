@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>North-Launch - лаунчер Minecraft</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>recources/textures/launcher/NLauncher.png</normaloff>recources/textures/launcher/NLauncher.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Общие настройки для всего окна */
+QWidget {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+}
+
+/* Стилизация кнопок */
+QPushButton {
+    background-color: #89b4fa;
+    color: #11111b;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #b4befe;
+}
+
+QPushButton:pressed {
+    background-color: #74c7ec;
+}
+
+/* Поля ввода (LineEdit, TextEdit) */
+QLineEdit, QTextEdit {
+    background-color: #313244;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 5px;
+    selection-background-color: #f5c2e7;
+}
+
+QLineEdit:focus {
+    border: 2px solid #89b4fa;
+}
+
+/* Списки и таблицы */
+QListWidget, QTableWidget {
+    background-color: #313244;
+    border: 1px solid #45475a;
+    border-radius: 10px;
+    gridline-color: #45475a;
+}
+
+/* Скроллбары (тонкие и современные) */
+QScrollBar:vertical {
+    border: none;
+    background: #1e1e2e;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #45475a;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #585b70;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="bg">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>-30</y>
+      <width>751</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>recources/textures/launcher/dark_bg.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_account_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>34</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#whiteButton {
+    background-color: #ffffff; 
+    border: 1px solid #cdd6f4;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::InsertImage"/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="account_select">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_btn">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>180</y>
+      <width>121</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#whiteButton {
+    background-color: #ffffff; 
+    border: 1px solid #cdd6f4;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить</string>
+    </property>
+    <property name="icon">
+     <iconset theme="contact-new"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="play_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>140</y>
+      <width>201</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ИГРАТЬ</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="version_select">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>100</y>
+      <width>201</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_btn">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>180</y>
+      <width>34</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#whiteButton {
+    background-color: #ffffff; 
+    border: 1px solid #cdd6f4;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::EditDelete"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="folder_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>180</y>
+      <width>34</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#whiteButton {
+    background-color: #ffffff; 
+    border: 1px solid #cdd6f4;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::DocumentPrintPreview"/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="left_panel">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>30</y>
+      <width>331</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>recources/textures/launcher/side.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="low_panel">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>380</y>
+      <width>531</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>recources/textures/launcher/panel.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settings_btn">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>550</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Опции</string>
+    </property>
+    <property name="icon">
+     <iconset theme="document-save-as"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="links_btn">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>550</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Связь</string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::CallStart"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="github_btn">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>550</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ГитХаб</string>
+    </property>
+    <property name="icon">
+     <iconset theme="network-wireless"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="info_btn">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>550</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Инфо</string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::FormatTextDirectionLtr"/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ver">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Чендж-лог 0.1.0</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="short_desc">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Первый открытый тест North Launcher:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="links">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>180</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Следите за новостями лаунчера в нашем Telegram, VK и GitHub</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="desc">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>110</y>
+      <width>281</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Основные функции лаунчера, интерфейс, система сборок </string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>540</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: transparent;
+    border: none; /* Убираем рамку, если она была */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>recources/textures/launcher/NLauncher.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="del_account_btn">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>34</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="edit-delete"/>
+    </property>
+   </widget>
+   <zorder>bg</zorder>
+   <zorder>left_panel</zorder>
+   <zorder>add_account_btn</zorder>
+   <zorder>account_select</zorder>
+   <zorder>add_btn</zorder>
+   <zorder>play_btn</zorder>
+   <zorder>version_select</zorder>
+   <zorder>delete_btn</zorder>
+   <zorder>folder_btn</zorder>
+   <zorder>low_panel</zorder>
+   <zorder>settings_btn</zorder>
+   <zorder>links_btn</zorder>
+   <zorder>github_btn</zorder>
+   <zorder>info_btn</zorder>
+   <zorder>ver</zorder>
+   <zorder>short_desc</zorder>
+   <zorder>links</zorder>
+   <zorder>desc</zorder>
+   <zorder>logo</zorder>
+   <zorder>del_account_btn</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
