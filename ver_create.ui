@@ -51,7 +51,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Название сборки</string>
+    <string>example name</string>
    </property>
   </widget>
   <widget class="QComboBox" name="modloader_select">

@@ -51,7 +51,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Никнейм/почта(Online)</string>
+    <string>Login/mail(online)</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="password">
@@ -64,7 +64,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Пароль</string>
+    <string>password</string>
    </property>
   </widget>
   <widget class="QComboBox" name="account_type">

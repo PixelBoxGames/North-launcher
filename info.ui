@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="abt_title">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -53,7 +53,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="abt_short_desc">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -81,7 +81,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="abt_desc">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -109,7 +109,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="abt_follow">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -137,7 +137,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="abt_link">
    <property name="geometry">
     <rect>
      <x>0</x>

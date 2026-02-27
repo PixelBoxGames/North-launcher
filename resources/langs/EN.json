@@ -1,0 +1,38 @@
+{
+    "main":{
+        "play_btn":"PLAY",
+        "settings_btn":"Options",
+        "about":"Info",
+        "github":"GitHub",
+        "links":"Links",
+        "add":"Add",
+        "wn_title":"What's new:",
+        "wn_short_desc":"Version 0.1.0 first open test",
+        "wn_desc":"Added basic standard launcher features",
+        "wn_follow":"Follow updates on TG and GitHub"
+    },
+    "settings":{
+        "ram":"RAM: ",
+        "lang":"Language: ",
+        "mb":"MB",
+        "theme":"Theme: ",
+        "path":"Path: ",
+        "title":"North Launcher Options: "
+    },
+    "about":{
+        "abt_t":"North - Launcher",
+        "abt_sd":"North is a cracked launcher for running the famous game Minecraft",
+        "abt_d":"The launcher allows you to run the game with or without a license from anywhere in the world",
+        "abt_f":"Follow the launcher on GitHub and TG",
+        "abt_l":"You can contact the creator via TG."
+    },
+    "sys":{
+        "er_msg":"Error!",
+        "suc_msg":"Success!",
+        "er_js":"Your JSON files are corrupted; reinstallation or manual file repair is recommended",
+        "er_mis":"The selected option was NOT found, please choose something else",
+        "er_cyr":"Please do not use Cyrillic and/or special characters",
+        "suc_del1":"Element ",
+        "suc_del2":" has been deleted"
+    }
+}

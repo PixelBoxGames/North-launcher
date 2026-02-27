@@ -41,7 +41,7 @@
     <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -84,7 +84,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="ramtxt">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -97,7 +97,7 @@
     <string>RAM : </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="mbtxt">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -110,7 +110,7 @@
     <string>MB</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="themetxt">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -143,7 +143,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="langtxt">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -176,7 +176,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="pathtxt">
    <property name="geometry">
     <rect>
      <x>10</x>
